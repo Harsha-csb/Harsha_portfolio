@@ -115,10 +115,11 @@ export const profile = {
     email: 'mailto:harshavardhan619561@gmail.com',
   },
 
-  /* Place your PDF inside /public and keep this path.
+  /* Place your PDF inside /public and keep this filename.
      To update your resume, simply replace that file with a newer version —
-     nothing else in the code needs to change. */
-  resumeUrl: '/Harshavardhan_Uppaluri_Resume.pdf',
+     nothing else in the code needs to change. BASE_URL keeps the path correct
+     for any Vite base configuration. */
+  resumeUrl: `${import.meta.env.BASE_URL}Harshavardhan_Uppaluri_Resume.pdf`,
   resumeUpdated: 'November 2026', // TODO: update this date when you replace the PDF
 }
 
