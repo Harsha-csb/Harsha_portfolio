@@ -1,0 +1,164 @@
+.footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-2) 70%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.footer__inner {
+  padding-top: 54px;
+  padding-bottom: 30px;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr auto;
+  gap: 34px;
+  align-items: start;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer__brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.footer__mark {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #fff;
+  background: var(--gradient-brand);
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.42);
+  flex-shrink: 0;
+}
+
+.footer__brand h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.footer__tagline {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  max-width: 320px;
+  margin-bottom: 12px;
+}
+
+.footer__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer__email:hover {
+  color: var(--primary);
+}
+
+.footer__nav h4,
+.footer__connect h4 {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+}
+
+.footer__links a {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer__links a:hover {
+  color: var(--primary);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 11px;
+}
+
+.footer__socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 1rem;
+  transition: transform var(--transition), color var(--transition),
+    background var(--transition), border-color var(--transition);
+}
+
+.footer__socials a:hover {
+  transform: translateY(-4px);
+  color: #fff;
+  border-color: transparent;
+  background: var(--gradient-brand);
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+}
+
+.footer__bottom p {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+.footer__top-btn {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.1rem;
+  transition: transform var(--transition), background var(--transition),
+    color var(--transition), border-color var(--transition);
+}
+
+.footer__top-btn:hover {
+  transform: translateY(-4px);
+  color: #fff;
+  border-color: transparent;
+  background: var(--gradient-brand);
+}
+
+@media (max-width: 780px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .footer__bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}

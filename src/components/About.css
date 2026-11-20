@@ -1,0 +1,136 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 46px;
+  align-items: start;
+}
+
+.about__text p {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  font-size: 1.02rem;
+}
+
+.about__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.about__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text);
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.about__list li svg {
+  color: var(--primary);
+  flex-shrink: 0;
+  font-size: 1.05rem;
+}
+
+/* Highlight cards */
+.about__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.about__card {
+  padding: 26px 22px;
+}
+
+.about__card-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  color: #fff;
+  background: var(--gradient-brand);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.4);
+  margin-bottom: 18px;
+}
+
+.about__card h3 {
+  font-size: 1.06rem;
+  margin-bottom: 8px;
+}
+
+.about__card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Stats strip */
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 54px;
+}
+
+.about__stat {
+  padding: 24px;
+  text-align: center;
+}
+
+.about__stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  margin-bottom: 4px;
+}
+
+.about__stat span {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* Tagline */
+.about__tagline {
+  margin-top: 42px;
+  padding: 34px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about__tagline-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3.4vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: linear-gradient(90deg, #3b82f6, #a855f7, #22d3ee, #3b82f6);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 9s linear infinite;
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .about__cards {
+    grid-template-columns: 1fr;
+  }
+}

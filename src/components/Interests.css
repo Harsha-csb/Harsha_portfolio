@@ -1,0 +1,78 @@
+.interests__intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 30px;
+  margin-bottom: 44px;
+}
+
+.interests__intro-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  background: var(--gradient-brand);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.42);
+  flex-shrink: 0;
+}
+
+.interests__intro p {
+  color: var(--text-muted);
+  font-size: 1.03rem;
+  line-height: 1.75;
+  max-width: 78ch;
+}
+
+.interests__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+  gap: 18px;
+}
+
+.interests__card {
+  padding: 28px 26px;
+}
+
+.interests__card-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  color: var(--primary);
+  background: var(--gradient-soft);
+  border: 1px solid var(--border);
+  margin-bottom: 18px;
+  transition: transform var(--transition), color var(--transition);
+}
+
+.interests__card:hover .interests__card-icon {
+  transform: scale(1.08) rotate(-4deg);
+  color: var(--violet);
+}
+
+.interests__card h3 {
+  font-size: 1.04rem;
+  margin-bottom: 8px;
+}
+
+.interests__card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.62;
+}
+
+@media (max-width: 640px) {
+  .interests__intro {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+  .interests__card {
+    padding: 24px;
+  }
+}

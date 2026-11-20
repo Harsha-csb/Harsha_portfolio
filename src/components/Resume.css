@@ -1,0 +1,245 @@
+.resume__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ---------- PDF preview panel ---------- */
+.resume__preview {
+  padding: 14px;
+}
+
+.resume__preview-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px 14px;
+}
+
+.resume__dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  flex-shrink: 0;
+}
+
+.resume__dot:nth-child(1) {
+  background: #ff5f57;
+}
+
+.resume__dot:nth-child(2) {
+  background: #febc2e;
+}
+
+.resume__dot:nth-child(3) {
+  background: #28c840;
+}
+
+.resume__filename {
+  margin-left: 8px;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resume__frame {
+  position: relative;
+  height: 520px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.resume__frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.resume__preview-note {
+  margin-top: 12px;
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.resume__preview-note strong {
+  color: var(--text-muted);
+}
+
+/* ---------- Info pane ---------- */
+.resume__pane {
+  display: grid;
+  gap: 22px;
+  align-content: start;
+}
+
+.resume__doc {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.resume__doc-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  color: #fff;
+  background: var(--gradient-brand);
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.42);
+  flex-shrink: 0;
+}
+
+.resume__doc h3 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.resume__doc p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.resume__points {
+  display: grid;
+  gap: 12px;
+}
+
+.resume__points li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.93rem;
+  color: var(--text-muted);
+}
+
+.resume__points li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.resume__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.resume__action {
+  width: 100%;
+}
+
+.resume__updated {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.resume__updated svg {
+  color: var(--primary);
+}
+
+.resume__note {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.resume__note code {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.72rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+/* ---------- Facts row ---------- */
+.resume__facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.resume__fact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 22px;
+}
+
+.resume__fact svg {
+  font-size: 1.3rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.resume__fact span {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 3px;
+}
+
+.resume__fact a,
+.resume__fact p {
+  font-size: 0.92rem;
+  color: var(--text);
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.resume__fact a:hover {
+  color: var(--primary);
+}
+
+.resume__fact--hl {
+  background: var(--gradient-soft);
+  border-color: var(--border-strong);
+}
+
+.resume__fact--hl p {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .resume__grid {
+    grid-template-columns: 1fr;
+  }
+  .resume__facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .resume__frame {
+    height: 400px;
+  }
+  .resume__actions {
+    grid-template-columns: 1fr;
+  }
+  .resume__facts {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,366 @@
+/* ============================================================
+   ACHIEVEMENTS — timeline + NQT results board
+   ============================================================ */
+
+/* ---------- Timeline ---------- */
+.ach__timeline {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  padding-left: 46px;
+  margin-bottom: 56px;
+}
+
+.ach__timeline::before {
+  content: '';
+  position: absolute;
+  left: 21px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary), var(--violet), transparent);
+  opacity: 0.45;
+}
+
+.ach__item {
+  position: relative;
+}
+
+.ach__marker {
+  position: absolute;
+  left: -46px;
+  top: 18px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  font-size: 1.15rem;
+  color: #fff;
+  z-index: 2;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+.ach__marker.is-academic {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+.ach__marker.is-internship {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+.ach__marker.is-project {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+}
+.ach__marker.is-certificate {
+  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+}
+.ach__marker.is-result {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.ach__card {
+  padding: 22px 26px;
+}
+
+.ach__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ach__year {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+}
+
+.ach__tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 999px;
+}
+
+.ach__tag.is-academic {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.14);
+}
+.ach__tag.is-internship {
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.14);
+}
+.ach__tag.is-project {
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.14);
+}
+.ach__tag.is-certificate {
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.14);
+}
+.ach__tag.is-result {
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.14);
+}
+
+.ach__card h3 {
+  font-size: 1.06rem;
+  margin-bottom: 7px;
+}
+
+.ach__card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.62;
+}
+
+/* ============================================================
+   NQT results board
+   ============================================================ */
+.nqt {
+  padding: 32px;
+}
+
+.nqt__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.nqt__eyebrow {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.nqt__title {
+  font-size: 1.28rem;
+}
+
+.nqt__lang {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 8px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.nqt__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  padding: 11px 15px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-strong);
+  background: var(--surface);
+  margin-bottom: 26px;
+}
+
+.nqt__note svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--primary);
+}
+
+.nqt__top {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+}
+
+.nqt__ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nqt__ring-inner {
+  display: grid;
+  place-items: center;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  text-align: center;
+}
+
+.nqt__ring-inner strong {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.nqt__ring-inner span {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.nqt__total {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nqt__total-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.nqt__total-score {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1;
+}
+
+.nqt__total-score small {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+/* Groups */
+.nqt__groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.nqt__group-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.nqt__cards {
+  display: grid;
+  gap: 14px;
+}
+
+.nqt__card {
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.nqt__card:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-2);
+}
+
+.nqt__card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.nqt__card-label {
+  font-size: 0.88rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.nqt__card-score {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  white-space: nowrap;
+}
+
+.nqt__card-score small {
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.nqt__bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.nqt__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gradient-brand);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 820px) {
+  .nqt__groups {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ach__timeline {
+    padding-left: 34px;
+  }
+  .ach__timeline::before {
+    left: 15px;
+  }
+  .ach__marker {
+    left: -34px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    top: 16px;
+  }
+  .ach__card {
+    padding: 20px 20px;
+  }
+  .nqt {
+    padding: 24px 20px;
+  }
+  .nqt__top {
+    gap: 20px;
+  }
+}

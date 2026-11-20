@@ -1,0 +1,19 @@
+.typing {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1em;
+}
+
+.typing__text {
+  font-weight: 700;
+}
+
+.typing__caret {
+  display: inline-block;
+  width: 3px;
+  height: 1.05em;
+  margin-left: 4px;
+  border-radius: 2px;
+  background: var(--gradient-brand);
+  animation: caret-blink 1s steps(1) infinite;
+}
